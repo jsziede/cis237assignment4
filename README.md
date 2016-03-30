@@ -66,7 +66,20 @@ The code in the Algorithms book for Stack, Queue, and Merge Sort are in Java. It
 Be sure to think about what the time complexity for the bucket sort will be. Think about how it compares to that of a normal sort such as Merge or Bubble. Also consider the space complexity compared to that of merge or bubble sort. You may see questions related to this on the next exam.
 
 ## Outside Resources Used
+### http://stackoverflow.com/questions/2085172/gettype-on-array-item
+#### Helped me determine how to check what type of Droid each element in the array was
 
+### http://stackoverflow.com/questions/32923151/remove-last-node-from-linked-list-c-sharp
+#### Helped me determine how to set up the linked lists
+
+### http://thinkingeek.com/2009/07/09/creating-and-testing-a-linked-list-based-queue-in-c-using-nunit/
+#### Helped me determine how to set up the GenericQueue class
+
+### https://en.wikipedia.org/wiki/Merge_sort
+#### Very useful Top Down algorithm
+
+### http://stackoverflow.com/questions/15835805/mergesort-algorithm-in-c-sharp
+#### Very useful with figuring out how to code the merge sort while uing generics
 
 
 ## Known Problems, Issues, And/Or Errors in the Program
