@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Joshua Sziede
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +19,13 @@ namespace cis237assignment4
         
         //Method to get the data for a droid into a nicely formated string that can be output.
         string GetPrintString();
+
+        //method used for quick testing to make an array without manually creating one through the interface
+        void CreateDummyData();
+
+        //method to sort droids by model
+        void SortByModel();
+
+        void MergeSortMethod();
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Joshua Sziede
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,12 @@ namespace cis237assignment4
         {
             //Create a new droid collection and set the size of it to 100.
             IDroidCollection droidCollection = new DroidCollection(100);
+            IDroidCollection aux = new DroidCollection(100);
 
             //Create a user interface and pass the droidCollection into it as a dependency
             UserInterface userInterface = new UserInterface(droidCollection);
+
+            droidCollection.CreateDummyData();
 
             //Display the main greeting for the program
             userInterface.DisplayGreeting();
@@ -26,7 +31,7 @@ namespace cis237assignment4
             int choice = userInterface.GetMenuChoice();
 
             //While the choice is not equal to 3, continue to do work with the program
-            while (choice != 3)
+            while (choice != 5)
             {
                 //Test which choice was made
                 switch (choice)
@@ -39,6 +44,18 @@ namespace cis237assignment4
                     //Choose to Print the droid
                     case 2:
                         userInterface.PrintDroidList();
+                        break;
+
+                    //chhose to sort the droids by model
+                    case 3:
+                        droidCollection.SortByModel();
+                        userInterface.BucketSortCompletion();
+                        break;
+
+                    //choose to sort the droids by total cost
+                    case 4:
+                        droidCollection.MergeSortMethod();
+                        userInterface.MergeSortCompletion();
                         break;
                 }
                 //Re-display the menu, and re-prompt for the choice

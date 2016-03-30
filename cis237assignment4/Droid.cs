@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Joshua Sziede
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,6 +60,24 @@ namespace cis237assignment4
 
         //Abstract method that MUST be overriden in the derived class to calculate the total cost
         public abstract void CalculateTotalCost();
+
+        //CompareTo method used in order to implement from IComparable
+        public int CompareTo(IDroid aux)
+        {
+            //if statements used to define that the CompareTo needs to compare the Total Cost of each droid and return a value based on the result
+            if (this.TotalCost < aux.TotalCost)
+            {
+                return -1;
+            }
+            else if (this.TotalCost == aux.TotalCost)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
 
         //Overriden toString method that will return a string representing the basic information for any droid
         public override string ToString()

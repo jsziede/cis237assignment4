@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Joshua Sziede
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +33,9 @@ namespace cis237assignment4
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("1. Add a new droid to the system");
             Console.WriteLine("2. Print the list of droids out");
-            Console.WriteLine("3. Exit the program");
+            Console.WriteLine("3. Sort the list by model.");
+            Console.WriteLine("4. Sort the list by total cost.");
+            Console.WriteLine("5. Exit the program");
         }
 
         //Method to get a menu choice
@@ -94,6 +98,22 @@ namespace cis237assignment4
         {
             Console.WriteLine();
             Console.WriteLine(this.droidCollection.GetPrintString());
+        }
+
+        //method to alert user that the bucket sort is completed
+        public void BucketSortCompletion()
+        {
+            Console.WriteLine();
+            Console.WriteLine("The list has been sorted by model.");
+            Console.WriteLine();
+        }
+
+        //method to alert the user that the merge sort is completed
+        public void MergeSortCompletion()
+        {
+            Console.WriteLine();
+            Console.WriteLine("The list has been sorted by total cost.");
+            Console.WriteLine();
         }
 
         //Display the Model Selection
@@ -333,6 +353,5 @@ namespace cis237assignment4
                     break;
             }
         }
-
     }
 }
